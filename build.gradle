@@ -12,13 +12,6 @@ repositories {
 
 dependencies {
     compileOnly 'net.portswigger.burp.extensions:montoya-api:2024.7'
-    // implementation 'commons-codec:commons-codec:1.17.1'
-    // implementation 'org.json:json:20240303'
-    // implementation 'com.thoughtworks.xstream:xstream:1.4.20'
-    // implementation 'org.codehaus.jettison:jettison:1.5.4'
-    implementation 'com.fasterxml.jackson.core:jackson-core:2.18.0'
-    implementation 'org.dom4j:dom4j:2.1.4'
-    implementation 'org.jsoup:jsoup:1.18.1'
 }
 
 jar {
