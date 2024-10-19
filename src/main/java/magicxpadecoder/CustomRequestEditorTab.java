@@ -10,7 +10,7 @@ public class CustomRequestEditorTab implements BurpExtension {
     public void initialize(MontoyaApi api) {
         this.api = api;
 
-        api.extension().setName("MagicXPA Decoder");
+        api.extension().setName("Magic xpa Decoder");
 
         // Register tab on requests and responses
         MyHttpRequestResponseEditorProvider editorProvider = new MyHttpRequestResponseEditorProvider(api);
