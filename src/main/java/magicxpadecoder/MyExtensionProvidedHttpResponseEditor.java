@@ -52,11 +52,13 @@ class MyExtensionProvidedHttpResponseEditor implements ExtensionProvidedHttpResp
 
     @Override
     public boolean isEnabledFor(HttpRequestResponse requestResponse) {
-        return (requestResponse.response().hasHeader("MgxpaNextSessionCounter") &&
-                requestResponse.response().hasHeader("Content-Type", "text/html"))
-                ||
-                (requestResponse.response().hasHeader("Access-Control-Expose-Headers", "MgxpaNextSessionCounter") &&
-                        requestResponse.response().hasHeader("Content-Type", "text/xml"));
+        // return (requestResponse.response().hasHeader("MgxpaNextSessionCounter") &&
+        //         requestResponse.response().hasHeader("Content-Type", "text/html"))
+        //         ||
+        //         (requestResponse.response().hasHeader("Access-Control-Expose-Headers", "MgxpaNextSessionCounter") &&
+        //                 requestResponse.response().hasHeader("Content-Type", "text/xml"));
+
+        return requestResponse.request().pathWithoutQuery().endsWith(".dll");
     }
 
     @Override

@@ -113,7 +113,8 @@ class MyExtensionProvidedHttpRequestEditor implements ExtensionProvidedHttpReque
         boolean header;
 
         try {
-            header = requestResponse.request().hasHeader("MgxpaRIAglobalUniqueSessionID");
+            // header = requestResponse.request().hasHeader("MgxpaRIAglobalUniqueSessionID");
+            header = requestResponse.request().pathWithoutQuery().endsWith(".dll");
         } catch (Exception ex) {
             return false;
         }
